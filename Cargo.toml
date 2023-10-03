@@ -1,0 +1,27 @@
+[package]
+name = "genres-registry"
+version = "1.0.0-dev"
+authors = ["Allfeat <hello@allfeat.com>"]
+edition = "2021"
+license = "Apache-2.0"
+homepage = "https://allfeat.com"
+description = "A registry of differents music genres to use in a substrate blockchain environment."
+readme = "README.md"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "3.6.1", default-features = false, features = ["max-encoded-len"] }
+scale-info = { version = "2.5.0", default-features = false, features = [
+    "derive",
+] }
+sp-runtime = { version = "24.0.0", default-features = false, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.1.0" }
+
+[features]
+default = ["std"]
+std = [
+    "codec/std",
+    "scale-info/std",
+    "sp-runtime/std"
+]
