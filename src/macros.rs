@@ -21,7 +21,7 @@ macro_rules! declare_music_genre {
             RuntimeDebug, Encode, Decode, TypeInfo, MaxEncodedLen
         )]
         pub enum MusicGenre {
-            $($genre($subtype)),*
+            $($genre(Option<$subtype>)),*
         }
     }
 }
