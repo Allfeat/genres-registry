@@ -11,6 +11,7 @@ Welcome to the Allfeat `Music Genres Registry` library — a dedicated Rust libr
 
 - Comprehensive list of music genres and their respective sub-genres.
 - Streamlined for blockchain applications written in Rust with Substrate.
+- Compatible with Ink and FRAME Substrate runtimes with the help of features `ink` and `substrate`.
 - Extensible and open to community contributions.
 
 ## Installation

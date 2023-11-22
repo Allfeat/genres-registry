@@ -17,10 +17,12 @@
 
 #![cfg_attr(not(feature = "std"), no_std)]
 
-pub mod macros;
+mod macros;
 
 use codec::{Decode, Encode, MaxEncodedLen};
 use scale_info::TypeInfo;
+
+#[cfg(feature = "substrate")]
 use sp_runtime::RuntimeDebug;
 
 declare_music_genre! {
