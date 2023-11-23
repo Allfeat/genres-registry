@@ -2,7 +2,7 @@
 macro_rules! declare_subtype {
     ($enum_name:ident { $($variant:ident),* $(,)? }) => {
         #[derive(
-            Clone, Copy, PartialEq, Eq, PartialOrd, Ord,
+            Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord,
             Encode, Decode, TypeInfo, MaxEncodedLen
         )]
         pub enum $enum_name {
@@ -17,7 +17,7 @@ macro_rules! declare_music_genre {
         $(declare_subtype!($subtype { $($variant),* });)*
 
         #[derive(
-            Clone, Copy, PartialEq, Eq, PartialOrd, Ord,
+            Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord,
             Encode, Decode, TypeInfo, MaxEncodedLen
         )]
         pub enum MusicGenre {
